@@ -85,4 +85,4 @@ Never commit `.env.local` to git.
 
 - **Styling:** the UI uses a hand-written CSS design system ([app/globals.css](app/globals.css)) built on the spec's colour tokens, not shadcn/ui. The behaviour described in the spec is the same either way.
 - **Pipeline table:** sorting and paging run on the server, so the table is a plain `<table>` and doesn't use TanStack Table.
-- **Flags on Windows:** Windows has no flag emoji, so country flags use Noto Color Emoji from Google Fonts. The browser only downloads that font's flag glyphs.
+- **Fonts are self-hosted** in [app/fonts](app/fonts) (Figtree, plus the flag glyphs of Noto Color Emoji, both under the SIL Open Font License), so builds never need to reach Google Fonts. Windows has no flag emoji of its own; the flag file is only downloaded when a page shows a flag.
