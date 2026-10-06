@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { Activity } from "lucide-react";
+
+export default function AuthLayout({ children }: { children: React.ReactNode }) {
+  return <div className="auth-layout"><div className="auth-brand"><Link href="/" className="brand"><span className="brand-mark"><Activity size={20} strokeWidth={2.6} /></span><span className="brand-text">leadflow</span></Link><div className="auth-hero"><div className="auth-hero-kicker">A quieter way to work your pipeline</div><h1>Start every day<br />knowing what’s next.</h1><p>One place for your LinkedIn profiles, leads, follow-ups, and conversations. Built for the work you do by hand.</p><div className="auth-hero-rule" /><div className="auth-step"><span>01</span><div><strong>Capture quickly</strong><small>Log the connection requests you send.</small></div></div><div className="auth-step"><span>02</span><div><strong>Follow through</strong><small>See exactly who needs a message today.</small></div></div><div className="auth-step"><span>03</span><div><strong>Keep momentum</strong><small>Track replies, meetings, and wins.</small></div></div></div><span className="auth-brand-footer">LeadFlow · Made for focused outreach</span></div><main className="auth-panel">{children}</main></div>;
+}

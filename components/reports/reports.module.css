@@ -1,0 +1,39 @@
+.page { max-width: 1200px; }
+.filters { padding: 13px 16px; }
+.presetRow { display: flex; flex-wrap: wrap; gap: 5px; }
+.preset { display: inline-flex; align-items: center; gap: 5px; border: 1px solid transparent; border-radius: 6px; background: transparent; color: var(--text-muted); padding: 7px 10px; font-size: 12px; font-weight: 600; }
+.preset:hover { background: var(--surface-muted); color: var(--text); }
+.preset.active { color: var(--primary); border-color: color-mix(in srgb, var(--primary) 22%, var(--border)); background: color-mix(in srgb, var(--primary) 9%, var(--surface)); }
+.filterBottom { display: flex; justify-content: space-between; align-items: end; gap: 14px; margin-top: 13px; padding-top: 13px; border-top: 1px solid var(--border); }
+.profileFilter { display: grid; gap: 5px; color: var(--text-muted); font-size: 11px; }
+.profileFilter select { width: 200px; }
+.dateSpan { color: var(--text); font-size: 12px; font-weight: 600; }
+.dateSpan span { color: var(--text-muted); font-weight: 400; }
+.customRange { display: flex; align-items: end; flex-wrap: wrap; gap: 10px; padding-top: 15px; }
+.customRange label { display: grid; gap: 5px; color: var(--text-muted); font-size: 11px; }
+.customRange input { min-height: 35px; border: 1px solid var(--border); border-radius: 6px; padding: 5px 8px; color: var(--text); background: var(--surface); }
+.notice { margin: 11px 0 0; color: var(--warning); font-size: 12px; }
+.section { margin-top: 27px; }
+.heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.heading p { color: var(--text-muted); font-size: 12px; margin: 4px 0 0; }
+.heading svg { color: var(--text-muted); }
+.funnel { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 9px; }
+.funnelStep { display: flex; flex-direction: column; min-width: 0; padding: 13px 14px 12px; }
+.stepNumber { color: var(--text-muted); font-size: 10px; }
+.funnelStep strong { margin-top: 13px; font-size: 26px; line-height: 1; }
+.stepLabel { color: var(--text); font-size: 12px; font-weight: 600; margin-top: 6px; }
+.conversion { color: var(--text-muted); font-size: 10px; margin-top: 8px; }
+.footnote { color: var(--text-muted); font-size: 11px; line-height: 1.5; margin: 10px 0 0; }
+.chartCard { padding: 16px 12px 10px; }
+.chart { width: 100%; height: 300px; }
+.tableGrid { display: grid; gap: 0; }
+.tableGrid .section { min-width: 0; }
+.effectiveness { padding: 20px; }
+.effectRow { display: grid; grid-template-columns: 170px minmax(0, 1fr) 45px; align-items: center; gap: 12px; margin-bottom: 16px; font-size: 12px; }
+.effectRow strong { text-align: right; }
+.effectTrack { height: 9px; background: var(--surface-muted); border-radius: 10px; overflow: hidden; }
+.effectTrack span { display: block; height: 100%; background: var(--primary); border-radius: inherit; }
+.effectRow:nth-child(2) .effectTrack span { background: var(--success); }
+.effectRow:nth-child(3) .effectTrack span { background: var(--warning); }
+@media (max-width: 1100px) { .funnel { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .funnel { grid-template-columns: repeat(2, minmax(0, 1fr)); } .filterBottom { align-items: start; flex-direction: column; } .effectRow { grid-template-columns: 110px minmax(0, 1fr) 32px; gap: 7px; } }
